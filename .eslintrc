@@ -25,6 +25,7 @@
     "space-in-parens": "error",
     "no-multiple-empty-lines": "error",
     "prefer-const": "error",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react/prop-types": "off"
   }
 }

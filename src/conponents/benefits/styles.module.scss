@@ -1,0 +1,164 @@
+.benefits {
+  padding: 130px 194px 130px 194px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  .title {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    text-align: center;
+
+    margin-right: 50px;
+
+    > h2 {
+      margin: 0;
+
+      color: #252422;
+    }
+  }
+
+  .list {
+    width: 950px;
+
+    .description {
+      font-family: Arial, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 34px;
+
+      color: #252422;
+
+      margin: 0 0 80px 0;
+    }
+
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > * {
+        width: 368px;
+        margin-bottom: 80px;
+
+        .index {
+          font-family: Arial, sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 120px;
+          line-height: 138px;
+          color: #CAB28B;
+
+          margin: 40px 0 20px 0;
+
+          > *:first-child {
+            color: white;
+            -webkit-text-stroke: 1px black;
+          }
+        }
+
+        > p {
+          font-family: Arial, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 21px;
+
+          color: #252422;
+
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .benefits {
+    flex-direction: column;
+
+    .title {
+      margin: 0 0 20px 0;
+    }
+
+    .list {
+      width: auto;
+
+      .description {
+        margin-bottom: 37px;
+      }
+
+      .items {
+        .firstColumn {
+          margin-right: 203px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .benefits {
+    padding: 100px 30px 100px 30px;
+
+    .list {
+      .items {
+        .firstColumn {
+          margin-right: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .benefits {
+    padding: 60px 16px 60px 16px;
+
+    .title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .list {
+
+      .description {
+        width: auto;
+
+        font-size: 18px;
+        line-height: 21px;
+
+        margin: 0 0 40px 0;
+      }
+
+      .items {
+        > * {
+          width: auto;
+
+          margin-bottom: 25px;
+
+          .index {
+            margin: 25px 0 20px 0;
+
+            font-size: 64px;
+            line-height: 74px;
+          }
+
+          > p {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+
+        .firstColumn {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

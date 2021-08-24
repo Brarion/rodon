@@ -1,0 +1,81 @@
+.personalGuard {
+  background: #CAB28B;
+  border-radius: 30px;
+
+  width: calc(368px - 2 * 50px);
+  height: calc(317px - 2 * 84px);
+
+  position: relative;
+
+  padding: 84px 50px;
+
+  color: white;
+
+  > h3 {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    margin: 0 0 30px 0;
+  }
+
+  > p {
+    width: 270px;
+
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  .personalGuardIcon {
+    position: absolute;
+    bottom: 0;
+    right: 14px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .personalGuard {
+    padding: 71px 40px;
+
+    width: calc(350px - 2 * 40px);
+    height: calc(291px - 2 * 71px);
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .personalGuard {
+    padding: 50px 16px;
+
+    width: calc(343px - 2 * 16px);
+    height: calc(175px - 2 * 50px);
+
+    > h3 {
+      font-size: 20px;
+      line-height: 23px;
+
+      margin-bottom: 15px;
+    }
+
+    > p {
+      font-size: 16px;
+      line-height: 18px;
+      width: 311px;
+
+      margin: 0;
+    }
+
+    .personalGuardIcon {
+      width: 115px;
+      height: 115px;
+      right: 15px;
+    }
+  }
+}

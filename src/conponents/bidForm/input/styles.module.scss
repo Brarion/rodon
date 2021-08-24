@@ -1,0 +1,39 @@
+.wrapper {
+  input {
+    border: none;
+    outline: none;
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #252422
+  }
+
+  > div {
+    height: 1px;
+    background: #C7C7C7;
+    width: 100%;
+    margin-top: 15px;
+
+    &.error {
+      background: rgba(255, 0, 46, 0.94);
+    }
+  }
+
+  > p {
+    color: rgba(255, 0, 46, 0.94);
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    height: 14px;
+
+    margin: 5px 0 0 0;
+  }
+
+}
