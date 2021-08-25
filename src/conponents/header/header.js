@@ -42,7 +42,7 @@ const Header = () => {
               <a href="#contacts">Контакты</a>
             </div>
             <div className={styles.buttons}>
-              <a className={styles.contacts} href="#contacts">
+              <a className={styles.contacts} href="tel:8-495-969-27-75">
                 СВЯЗАТЬСЯ
               </a>
               <button onClick={openFormClick} className={styles.application}>

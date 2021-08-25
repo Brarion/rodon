@@ -24,7 +24,7 @@ const LittleMenu = (props) => {
       >
         ОСТАВИТЬ ЗАЯВКУ
       </button>
-      <a className={styles.contacts} href="#contacts" onClick={props.closeBurger}>
+      <a className={styles.contacts} href="tel:8-495-969-27-75">
         СВЯЗАТЬСЯ
       </a>
     </div>

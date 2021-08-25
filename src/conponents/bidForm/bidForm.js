@@ -120,8 +120,8 @@ const BidForm = (props) => {
         <div className={styles.contacts}>
           <h3>Наши контакты</h3>
           <div>
-            <p>8 (495) 969-27-75</p>
-            <p>rodon@rodon.su</p>
+            <a href="tel:8-495-969-27-75">8 (495) 969-27-75</a>
+            <a href="mailto:rodon@rodon.su">rodon@rodon.su</a>
           </div>
         </div>
       )}

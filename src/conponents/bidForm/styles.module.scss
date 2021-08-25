@@ -158,8 +158,9 @@
     display: flex;
     justify-content: space-between;
 
-    > p {
+    > a {
       margin: 0;
+      text-decoration: none;
 
       font-family: Arial, sans-serif;
       font-style: normal;
