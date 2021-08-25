@@ -31,11 +31,11 @@ const Header = () => {
       <img src={headerMask} alt="headerMask" className={styles.mask} />
 
       <header>
-        <div className={styles.title}>
-          <a href="#header">РОДОН</a>
-        </div>
         {width >= 960 ? (
           <>
+            <div className={styles.title}>
+              <a href="#header">РОДОН</a>
+            </div>
             <div className={styles.menu}>
               <a href="#services">Услуги</a>
               <a href="#benefits">Преимущества</a>
@@ -51,22 +51,33 @@ const Header = () => {
             </div>
           </>
         ) : (
-          <>
+          <div className={styles.littleHeader}>
             <button onClick={burgerClick} className={`${styles.navToggle} ${openedBurger ? styles.opened : false}`}>
               <span className={styles.top} />
               <span className={styles.middle} />
               <span className={styles.bottom} />
             </button>
-          </>
+            <div className={styles.buttons}>
+              <a className={styles.contacts} href="tel:8-495-969-27-75">
+                СВЯЗАТЬСЯ
+              </a>
+              <button onClick={openFormClick} className={styles.application}>
+                ОСТАВИТЬ ЗАЯВКУ
+              </button>
+            </div>
+          </div>
         )}
       </header>
 
       <div className={styles.main}>
-        {width < 960 && <IconSmall className={styles.iconSmall} />}
-        <div className={styles.title}>
-          ВАША
-          <span> БЕЗОПАСНОСТЬ </span>— НАША ПРОФЕССИЯ
+        <div className={styles.iconWrapper}>
+          {width < 960 && <IconSmall className={styles.iconSmall} />}
+          <div className={styles.title}>
+            ВАША
+            <span> БЕЗОПАСНОСТЬ </span>— НАША ПРОФЕССИЯ
+          </div>
         </div>
+        {width < 960 && <h1>ГК РОДОН</h1>}
         <div className={styles.iconField}>
           {width > 1750 && <IconBig />}
           {width <= 1750 && width >= 960 && <IconMiddle />}
