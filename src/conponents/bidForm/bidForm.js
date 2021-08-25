@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import Input from './input/input'
 import useResize from '../../utils/useResize'
 
-const variants = [
+const variantList = [
   {
     id: 0,
     text: 'Охрана стационарных объектов',
@@ -36,7 +36,7 @@ const BidForm = (props) => {
   const [name, setName] = React.useState('')
   const [nameError, setNameError] = React.useState('')
 
-  const [variant, setVariant] = React.useState(null)
+  const [variants, setVariants] = React.useState([])
 
   const [phone, setPhone] = React.useState('')
   const [phoneError, setPhoneError] = React.useState('')
@@ -49,6 +49,14 @@ const BidForm = (props) => {
 
   const validatePhone = () => {
     setPhoneError(!/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone) ? 'Неверно заполнено поле' : '')
+  }
+
+  const variantClick = (id) => {
+    if (variants.some((v) => v === id)) {
+      setVariants(variants.filter((v) => v !== id))
+    } else {
+      setVariants([...variants, id])
+    }
   }
 
   if (formSent) {
@@ -97,11 +105,11 @@ const BidForm = (props) => {
         <div className={styles.variants}>
           <h3>Выберите услугу</h3>
           <div className={styles.list}>
-            {variants.map((item) => (
+            {variantList.map((item) => (
               <div
-                onClick={() => setVariant(item.id)}
+                onClick={() => variantClick(item.id)}
                 key={item.id}
-                className={item.id === variant ? styles.selected : ''}
+                className={variants.some((v) => v === item.id) ? styles.selected : ''}
               >
                 <div className={styles.circle} />
                 <div className={styles.text}>{item.text}</div>

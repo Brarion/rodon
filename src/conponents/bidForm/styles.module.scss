@@ -52,6 +52,8 @@
         > * {
           display: flex;
 
+          cursor: pointer;
+
           &.selected {
             .circle {
               background: #CAB28B;
