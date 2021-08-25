@@ -1,10 +1,10 @@
 .littleMenu {
   width: calc(100vw - 2 * 16px);
-  height: calc(100vh - 130px);
+  height: 100vh;
 
   z-index: 10;
 
-  position: absolute;
+  position: fixed;
 
   background: #131116;
 

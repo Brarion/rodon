@@ -383,6 +383,7 @@
     }
 
     &.opened {
+      position: fixed;
       > * {
         background: white;
       }
