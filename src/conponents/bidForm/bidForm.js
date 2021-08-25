@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import Input from './input/input'
 import useResize from '../../utils/useResize'
+import emailjs from 'emailjs-com'
 
 const variantList = [
   {
@@ -56,6 +57,31 @@ const BidForm = (props) => {
       setVariants(variants.filter((v) => v !== id))
     } else {
       setVariants([...variants, id])
+    }
+  }
+
+  const sendEmail = () => {
+    validateName()
+    validatePhone()
+
+    if (name && /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone)) {
+      emailjs
+        .send(
+          'service_z4g2i4f',
+          'template_7jq8rhm',
+          {
+            from_name: name,
+            phone: phone,
+            message: variantList
+              .filter((v) => variants.some((vv) => vv === v.id))
+              .map((v) => v.text)
+              .join('; '),
+          },
+          'user_EcLWSOcXdJUKwySGfo9Zp'
+        )
+        .then(() => {
+          setFormSent(true)
+        })
     }
   }
 
@@ -118,7 +144,7 @@ const BidForm = (props) => {
           </div>
         </div>
         <div className={styles.submit}>
-          <button type="button" onClick={() => setFormSent(true)}>
+          <button type="button" onClick={sendEmail}>
             ОТПРАВИТЬ ЗАЯВКУ
           </button>
           <p>Нажимая на кнопку «Отправить заявку», вы даёте согласие на обработку своих персональных данных</p>

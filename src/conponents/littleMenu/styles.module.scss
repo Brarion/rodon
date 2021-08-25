@@ -52,6 +52,13 @@
     color: white;
     border-radius: 5px;
 
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+
     &:hover {
       background: #AD8E5E;
       border: none;
@@ -74,6 +81,13 @@
     outline: none;
 
     cursor: pointer;
+
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
 
     &:hover {
       background: #AD8E5E;
